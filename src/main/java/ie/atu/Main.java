@@ -1,19 +1,26 @@
 package ie.atu;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter your name");
+        String name = scan.nextLine();
+        System.out.println("Please enter your address");
+        String address = scan.nextLine();
+        System.out.println("Please enter your phone");
+        String phone = scan.nextLine();
+        System.out.println("Please enter your customer number");
+        String custNum = scan.nextLine();
+        System.out.println("Do you want to be on the mailing list");
+        boolean list = scan.hasNextBoolean();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Customer newCust = new Customer(name,address, phone, custNum, list);
+        System.out.println("You entered " + newCust.toString());
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        ExtendCust = preferedcustomer = new ExtendCust();
+        preferedcustomer.setloyaltyPoints();
+        Sysyem.out.println();
+
     }
 }
